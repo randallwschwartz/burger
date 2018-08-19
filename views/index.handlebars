@@ -4,7 +4,7 @@
 
 <ul>
   {{#each burgers}}
-    {{#unless sleepy}}
+    {{#unless devoured}}
       {{> cats/cat-block sleep=true}}
     {{/unless}}
   {{/each}}
@@ -14,7 +14,7 @@
 
 <ul>
   {{#each burgers}}
-    {{#if sleepy}}
+    {{#if devoured}}
       {{> cats/cat-block sleep=false}}
     {{/if}}
   {{/each}}
@@ -30,8 +30,8 @@
 
   <div class="form-group">
     <label for="slee">Eaten?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Burger is eaten.<br>
-    <input type="radio" name="sleepy" value="0"> Burger is ready to eat.
+    <input type="radio" name="devoured" value="1" checked> Burger is eaten.<br>
+    <input type="radio" name="devoured" value="0"> Burger is ready to eat.
   </div>
 
   <button type="submit">Add A Burger</button>
