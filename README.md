@@ -1,1 +1,6 @@
-# burger
+# Eat-Da-Burger
+
+* This full-stack application allows a user to create a database of burgers and to choose a burger to be eaten.  The application uses Node, mySQL, Express, Handlebars, and ORM.  The files are arranged using an MVC layout.  
+
+
+![Eat-Da-Burger](./burger.png)

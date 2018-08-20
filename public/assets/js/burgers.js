@@ -5,7 +5,7 @@ $(function() {
     var id = $(this).data("id");
     var newSleep = $(this).data("newsleep");
 
-    var newSleepState = {
+    var devouredState = {
       // devoured: newSleep
       devoured: 1
     };
@@ -13,10 +13,10 @@ $(function() {
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newSleepState
+      data: devouredState
     }).then(
       function() {
-        console.log("changed sleep to", newSleep);
+        console.log("Burger devoured");
         // Reload the page to get the updated list
         location.reload();
       }
@@ -28,7 +28,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      burger_name: $("#ca").val().trim(),
+      burger_name: $("#new-burger").val().trim(),
       // devoured: $("[name=devoured]:checked").val().trim()
       devoured: 0
     };
@@ -39,7 +39,7 @@ $(function() {
       data: newBurger
     }).then(
       function() {
-        console.log("created new burger");
+        console.log("Added new burger");
         // Reload the page to get the updated list
         location.reload();
       }
